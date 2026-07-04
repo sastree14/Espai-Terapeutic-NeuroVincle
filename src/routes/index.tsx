@@ -112,7 +112,7 @@ function Home() {
           <div className="max-w-2xl">
             <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">Nuestros valores</p>
             <h2 className="mt-4 font-serif text-3xl md:text-4xl">
-              Una práctica clínica sin atajos.
+              Los principios que guían nuestra forma de acompañarte.
             </h2>
           </div>
           <div className="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
