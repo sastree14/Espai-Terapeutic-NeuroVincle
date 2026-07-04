@@ -61,8 +61,8 @@ function Home() {
             <h1 className="mt-6 font-serif text-4xl leading-[1.05] text-foreground md:text-6xl">
               Cuidar la mente <em className="text-primary not-italic">hoy</em>, para sostenerla mañana.
             </h1>
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg whitespace-pre-line">
-              Un espacio de atención psicológica para niños, adolescentes y adultos, donde trabajamos desde una perspectiva cercana, individualizada y basada en la evidencia científica.{"\n\n\n\n\n"}
+            <p className="mt-6 max-w-xl text-base font-normal leading-relaxed text-muted-foreground md:text-lg whitespace-pre-line">
+              Un espacio de atención psicológica para niños, adolescentes y adultos, donde trabajamos desde una perspectiva cercana, individualizada y basada en la evidencia científica.{"\n\n"}
               También ofrecemos servicios de evaluación y rehabilitación neuropsicológica para ayudar a recuperar y potenciar las funciones cognitivas y mejorar la autonomía en la vida cotidiana.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
