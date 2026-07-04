@@ -115,7 +115,7 @@ function Home() {
               Una práctica clínica sin atajos.
             </h2>
           </div>
-          <div className="mt-12 grid gap-10 md:grid-cols-3">
+          <div className="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
             {valores.map((v) => (
               <div key={v.titulo} className="border-t border-foreground/20 pt-6">
                 <h3 className="font-serif text-xl">{v.titulo}</h3>
