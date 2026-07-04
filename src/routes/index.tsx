@@ -16,16 +16,24 @@ export const Route = createFileRoute("/")({
 
 const valores = [
   {
-    titulo: "Honestidad",
-    texto: "Te explicamos qué vemos, qué no, y por qué. Sin promesas vacías ni diagnósticos apresurados.",
+    titulo: "Escucha",
+    texto:
+      "Cada persona tiene una historia única. Antes de intervenir, dedicamos el tiempo necesario a comprender tu situación, tus necesidades y aquello que es importante para ti. Creemos que una buena terapia empieza escuchando.",
   },
   {
-    titulo: "Transparencia",
-    texto: "Procesos, tiempos y honorarios claros desde la primera visita. Tú decides cada paso.",
+    titulo: "Rigor científico",
+    texto:
+      "Nuestro trabajo se basa en la evidencia científica y en una evaluación rigurosa. Seleccionamos las herramientas y tratamientos más adecuados para cada caso, siempre desde un enfoque profesional y actualizado.",
   },
   {
-    titulo: "Vocación",
-    texto: "Acompañamos cada caso con la dedicación de quien eligió esta profesión por convicción.",
+    titulo: "Cercanía",
+    texto:
+      "Queremos ofrecer un espacio donde puedas sentirte cómodo, escuchado y libre de juicios. La confianza y la relación terapéutica son la base para construir un proceso de cambio.",
+  },
+  {
+    titulo: "Atención personalizada",
+    texto:
+      "No entendemos la psicología como un conjunto de soluciones estándar. Cada intervención se adapta a la persona, a su contexto y a sus objetivos, respetando siempre su ritmo y necesidades.",
   },
 ];
 
@@ -107,7 +115,7 @@ function Home() {
               Una práctica clínica sin atajos.
             </h2>
           </div>
-          <div className="mt-12 grid gap-10 md:grid-cols-3">
+          <div className="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
             {valores.map((v) => (
               <div key={v.titulo} className="border-t border-foreground/20 pt-6">
                 <h3 className="font-serif text-xl">{v.titulo}</h3>
