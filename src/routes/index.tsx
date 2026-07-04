@@ -62,7 +62,7 @@ function Home() {
               Cuidar la mente <em className="text-primary not-italic">hoy</em>, para sostenerla mañana.
             </h1>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg whitespace-pre-line">
-              Un espacio de atención psicológica especializada para niños, adolescentes y adultos, orientado a promover el bienestar emocional y mejorar la calidad de vida. Ofrecemos evaluación e intervención personalizada para afrontar dificultades emocionales, problemas de conducta y los retos que pueden surgir en las diferentes etapas de la vida.{"\n\n\n\n"}
+              Un espacio de atención psicológica especializada para niños, adolescentes y adultos, orientado a promover el bienestar emocional y mejorar la calidad de vida. Ofrecemos evaluación e intervención personalizada para afrontar dificultades emocionales, problemas de conducta y los retos que pueden surgir en las diferentes etapas de la vida.{"\n\n"}
               Además, contamos con un servicio de neuropsicología centrado en la evaluación y la rehabilitación neuropsicológica, dirigido a personas con alteraciones cognitivas derivadas de daño cerebral, enfermedades neurológicas o trastornos del neurodesarrollo, con el objetivo de favorecer su autonomía y funcionamiento en la vida diaria.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
