@@ -111,7 +111,7 @@ function Home() {
         <div className="mx-auto max-w-6xl px-6 py-20">
           <div className="max-w-2xl">
             <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">Nuestros valores</p>
-            <h2 className="mt-4 font-serif text-3xl md:text-4xl">
+            <h2 className="mt-4 font-serif text-3xl italic font-light leading-tight tracking-tight text-foreground md:text-4xl">
               Los principios que guían nuestra forma de acompañarte.
             </h2>
           </div>
