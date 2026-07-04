@@ -1,5 +1,4 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import janaFoto from "@/assets/jana-cara.jpg.asset.json";
 
 export const Route = createFileRoute("/sobre-nosotras")({
   head: () => ({
@@ -47,17 +46,9 @@ function SobreNosotras() {
         <div className="mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-2">
           {equipo.map((p, i) => (
             <article key={p.nombre} className="bg-background p-8 shadow-[0_20px_50px_-30px_rgba(40,30,20,0.25)]">
-              {i === 0 ? (
-                <img
-                  src={janaFoto.url}
-                  alt={p.nombre}
-                  className="h-20 w-20 rounded-full border border-primary/30 object-cover"
-                />
-              ) : (
-                <div className="flex h-20 w-20 items-center justify-center rounded-full border border-primary/30 font-serif text-3xl text-primary">
-                  {p.inicial}
-                </div>
-              )}
+              <div className="flex h-20 w-20 items-center justify-center rounded-full border border-primary/30 font-serif text-3xl text-primary">
+                {p.inicial}
+              </div>
               <h2 className="mt-6 font-serif text-2xl">{p.nombre}</h2>
               <p className="text-sm uppercase tracking-wider text-muted-foreground">{p.rol}</p>
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{p.bio}</p>
