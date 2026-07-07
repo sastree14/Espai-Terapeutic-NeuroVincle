@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroImg from "../assets/hero-consulta.jpg";
-import cognitiveImg from "../assets/cognitive.jpg";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -149,39 +149,6 @@ function Home() {
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.texto}</p>
             </article>
           ))}
-        </div>
-      </section>
-
-      {/* Reserva cognitiva */}
-      <section className="bg-primary/5">
-        <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-2 md:items-center">
-          <img
-            src={cognitiveImg}
-            alt="Ejercicio cognitivo con piezas de madera"
-            width={1200}
-            height={900}
-            loading="lazy"
-            className="aspect-[4/3] w-full rounded-sm object-cover"
-          />
-          <div>
-            <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
-              Prevención y reserva cognitiva
-            </p>
-            <h2 className="mt-4 font-serif text-3xl md:text-4xl">
-              El cerebro también se entrena. Empezar pronto importa.
-            </h2>
-            <p className="mt-6 text-base leading-relaxed text-muted-foreground">
-              Las enfermedades neurodegenerativas, como el Alzheimer, comienzan años antes de los
-              primeros síntomas. La estimulación cognitiva sostenida, los hábitos de vida y un
-              seguimiento clínico permiten ampliar la reserva cognitiva y retrasar su impacto.
-            </p>
-            <Link
-              to="/neuropsicologia"
-              className="mt-8 inline-flex items-center text-sm font-medium text-foreground underline-offset-4 hover:underline"
-            >
-              Conoce nuestro enfoque →
-            </Link>
-          </div>
         </div>
       </section>
 
