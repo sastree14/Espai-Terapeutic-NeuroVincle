@@ -38,22 +38,10 @@ const valores = [
 ];
 
 const servicios = [
-  {
-    titulo: "Evaluación neuropsicológica",
-    texto: "Exploración estructurada de memoria, atención, lenguaje y funciones ejecutivas.",
-  },
-  {
-    titulo: "Estimulación cognitiva",
-    texto: "Programas individualizados para mantener y entrenar la reserva cognitiva.",
-  },
-  {
-    titulo: "Psicología clínica",
-    texto: "Terapia individual para ansiedad, duelo, estado de ánimo y acompañamiento vital.",
-  },
-  {
-    titulo: "Acompañamiento familiar",
-    texto: "Orientación a familias que conviven con deterioro cognitivo o Alzheimer.",
-  },
+  "Evaluación neuropsicológica",
+  "Estimulación cognitiva",
+  "Psicología clínica",
+  "Acompañamiento familiar",
 ];
 
 function Home() {
