@@ -13,36 +13,12 @@ export const Route = createFileRoute("/servicios")({
 });
 
 const items = [
-  {
-    titulo: "Evaluación neuropsicológica",
-    quien: "Adultos y mayores con quejas de memoria, cambios cognitivos o sospecha de deterioro.",
-    incluye: ["Entrevista clínica", "Baterías estandarizadas", "Informe escrito con devolución"],
-  },
-  {
-    titulo: "Estimulación cognitiva",
-    quien: "Personas que desean entrenar la reserva cognitiva o ralentizar un deterioro incipiente.",
-    incluye: ["Plan individualizado", "Sesiones semanales", "Material para casa"],
-  },
-  {
-    titulo: "Psicología clínica adultos",
-    quien: "Ansiedad, ánimo bajo, duelo, autoestima, momentos vitales complejos.",
-    incluye: ["Enfoque integrador", "Sesiones de 50 min", "Presencial u online"],
-  },
-  {
-    titulo: "Acompañamiento familiar",
-    quien: "Familias que conviven con Alzheimer u otra enfermedad neurodegenerativa.",
-    incluye: ["Orientación práctica", "Pautas de comunicación", "Apoyo emocional al cuidador"],
-  },
-  {
-    titulo: "Prevención y hábitos",
-    quien: "Personas sanas que quieren cuidar su salud cerebral a largo plazo.",
-    incluye: ["Evaluación de base", "Rutinas cognitivas", "Recomendaciones de estilo de vida"],
-  },
-  {
-    titulo: "Segunda opinión",
-    quien: "Si ya tienes un diagnóstico y quieres una mirada complementaria.",
-    incluye: ["Revisión de informes", "Entrevista clínica", "Devolución honesta"],
-  },
+  "Evaluación neuropsicológica",
+  "Estimulación cognitiva",
+  "Psicología clínica adultos",
+  "Acompañamiento familiar",
+  "Prevención y hábitos",
+  "Segunda opinión",
 ];
 
 function Servicios() {
