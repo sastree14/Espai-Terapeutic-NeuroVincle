@@ -13,36 +13,12 @@ export const Route = createFileRoute("/servicios")({
 });
 
 const items = [
-  {
-    titulo: "Evaluación neuropsicológica",
-    quien: "Adultos y mayores con quejas de memoria, cambios cognitivos o sospecha de deterioro.",
-    incluye: ["Entrevista clínica", "Baterías estandarizadas", "Informe escrito con devolución"],
-  },
-  {
-    titulo: "Estimulación cognitiva",
-    quien: "Personas que desean entrenar la reserva cognitiva o ralentizar un deterioro incipiente.",
-    incluye: ["Plan individualizado", "Sesiones semanales", "Material para casa"],
-  },
-  {
-    titulo: "Psicología clínica adultos",
-    quien: "Ansiedad, ánimo bajo, duelo, autoestima, momentos vitales complejos.",
-    incluye: ["Enfoque integrador", "Sesiones de 50 min", "Presencial u online"],
-  },
-  {
-    titulo: "Acompañamiento familiar",
-    quien: "Familias que conviven con Alzheimer u otra enfermedad neurodegenerativa.",
-    incluye: ["Orientación práctica", "Pautas de comunicación", "Apoyo emocional al cuidador"],
-  },
-  {
-    titulo: "Prevención y hábitos",
-    quien: "Personas sanas que quieren cuidar su salud cerebral a largo plazo.",
-    incluye: ["Evaluación de base", "Rutinas cognitivas", "Recomendaciones de estilo de vida"],
-  },
-  {
-    titulo: "Segunda opinión",
-    quien: "Si ya tienes un diagnóstico y quieres una mirada complementaria.",
-    incluye: ["Revisión de informes", "Entrevista clínica", "Devolución honesta"],
-  },
+  "Evaluación neuropsicológica",
+  "Estimulación cognitiva",
+  "Psicología clínica adultos",
+  "Acompañamiento familiar",
+  "Prevención y hábitos",
+  "Segunda opinión",
 ];
 
 function Servicios() {
@@ -62,17 +38,8 @@ function Servicios() {
       <section className="mx-auto max-w-6xl px-6 pb-20">
         <div className="grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-2">
           {items.map((s) => (
-            <article key={s.titulo} className="flex h-full flex-col bg-background p-8">
-              <h2 className="font-serif text-2xl">{s.titulo}</h2>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.quien}</p>
-              <ul className="mt-6 space-y-2 text-sm text-foreground">
-                {s.incluye.map((i) => (
-                  <li key={i} className="flex gap-3">
-                    <span className="mt-2 inline-block h-px w-4 bg-primary" />
-                    <span>{i}</span>
-                  </li>
-                ))}
-              </ul>
+            <article key={s} className="flex h-full items-center bg-background p-8">
+              <h2 className="font-serif text-2xl">{s}</h2>
             </article>
           ))}
         </div>
