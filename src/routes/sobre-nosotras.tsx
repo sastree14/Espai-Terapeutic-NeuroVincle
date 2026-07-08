@@ -33,12 +33,12 @@ function SobreNosotras() {
       <section className="mx-auto max-w-4xl px-6 py-20 md:py-28">
         <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">Sobre nosotras</p>
         <h1 className="mt-4 font-serif text-4xl md:text-5xl">
-          Dos profesionales, una misma forma de entender la clínica.
+          Cada historia importa.
         </h1>
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-          Somos dos psicólogas con trayectorias complementarias y una misma manera de trabajar:
-          escuchar antes de interpretar, comprender antes de intervenir y construir junto a cada
-          persona el camino que mejor se adapte a sus necesidades.
+          Detrás de cada consulta hay una experiencia única. Por eso trabajamos desde la cercanía,
+          la escucha y la evidencia científica, acompañando a cada persona según sus necesidades y
+          su propio ritmo.
         </p>
       </section>
 
