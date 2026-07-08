@@ -38,8 +38,8 @@ function Servicios() {
       <section className="mx-auto max-w-6xl px-6 pb-20">
         <div className="grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-2">
           {items.map((s) => (
-            <article key={s.titulo} className="flex h-full items-center bg-background p-8">
-              <h2 className="font-serif text-2xl">{s.titulo}</h2>
+            <article key={s} className="flex h-full items-center bg-background p-8">
+              <h2 className="font-serif text-2xl">{s}</h2>
             </article>
           ))}
         </div>
