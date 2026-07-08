@@ -36,9 +36,9 @@ function SobreNosotras() {
           Dos profesionales, una misma forma de entender la clínica.
         </h1>
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-          Nos formamos en psicología y neuropsicología porque creemos que cuidar la mente exige
-          escuchar antes de actuar y explicar antes de intervenir. Acompañamos cada caso con
-          tiempo, evidencia y respeto.
+          Somos dos psicólogas con trayectorias complementarias y una misma manera de trabajar:
+          escuchar antes de interpretar, comprender antes de intervenir y construir junto a cada
+          persona el camino que mejor se adapte a sus necesidades.
         </p>
       </section>
 
