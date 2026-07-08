@@ -132,9 +132,8 @@ function Home() {
         </div>
         <div className="mt-12 grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-2">
           {servicios.map((s) => (
-            <article key={s.titulo} className="bg-background p-8">
-              <h3 className="font-serif text-xl">{s.titulo}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.texto}</p>
+            <article key={s} className="flex h-full items-center bg-background p-8">
+              <h3 className="font-serif text-xl">{s}</h3>
             </article>
           ))}
         </div>
