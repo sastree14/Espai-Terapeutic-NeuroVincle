@@ -62,17 +62,8 @@ function Servicios() {
       <section className="mx-auto max-w-6xl px-6 pb-20">
         <div className="grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-2">
           {items.map((s) => (
-            <article key={s.titulo} className="flex h-full flex-col bg-background p-8">
+            <article key={s.titulo} className="flex h-full items-center bg-background p-8">
               <h2 className="font-serif text-2xl">{s.titulo}</h2>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.quien}</p>
-              <ul className="mt-6 space-y-2 text-sm text-foreground">
-                {s.incluye.map((i) => (
-                  <li key={i} className="flex gap-3">
-                    <span className="mt-2 inline-block h-px w-4 bg-primary" />
-                    <span>{i}</span>
-                  </li>
-                ))}
-              </ul>
             </article>
           ))}
         </div>
