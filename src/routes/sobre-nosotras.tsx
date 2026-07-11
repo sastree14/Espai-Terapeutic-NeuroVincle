@@ -20,10 +20,10 @@ const equipo = [
     inicial: "·",
   },
   {
-    nombre: "Profesional 2",
-    rol: "Neuropsicóloga · Psicóloga clínica",
-    bio: "Centrada en intervención psicológica, acompañamiento en duelo y trabajo con familias de personas con Alzheimer y otras demencias.",
-    inicial: "·",
+    nombre: "Ariadna Golsa Muñoz",
+    rol: "Psicóloga General Sanitaria",
+    bio: "Soy Psicóloga General Sanitaria, especializada en psicoterapia infantojuvenil y de adultos. Trabajo desde un enfoque integrador, cercano y basado en la evidencia científica, y cuento con formación específica en el abordaje de los trastornos del estado de ánimo.\n\nEntiendo la terapia como un espacio de confianza, escucha y acompañamiento, donde cada persona pueda expresarse con libertad, comprender lo que le ocurre y encontrar herramientas para afrontar sus dificultades. Mi objetivo es ofrecer una atención personalizada, adaptando cada proceso a las necesidades y circunstancias de cada persona.",
+    inicial: "A",
   },
 ];
 
@@ -51,7 +51,11 @@ function SobreNosotras() {
               </div>
               <h2 className="mt-6 font-serif text-2xl">{p.nombre}</h2>
               <p className="text-sm uppercase tracking-wider text-muted-foreground">{p.rol}</p>
-              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{p.bio}</p>
+              <div className="mt-4 space-y-4 text-sm leading-relaxed text-muted-foreground">
+                {p.bio.split("\n\n").map((parrafo, idx) => (
+                  <p key={idx}>{parrafo}</p>
+                ))}
+              </div>
             </article>
           ))}
         </div>
