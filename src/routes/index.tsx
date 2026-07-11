@@ -64,8 +64,7 @@ function Home() {
               Cuidar la mente <em className="text-primary not-italic">hoy</em>, para sostenerla mañana.
             </h1>
             <p className="mt-6 max-w-xl text-base font-normal leading-relaxed text-muted-foreground md:text-lg whitespace-pre-line">
-              Un espacio de atención psicológica para niños, adolescentes y adultos, donde trabajamos desde una perspectiva cercana, individualizada y basada en la evidencia científica.{"\n\n"}
-              También ofrecemos servicios de evaluación y rehabilitación neuropsicológica para ayudar a recuperar y potenciar las funciones cognitivas y mejorar la autonomía en la vida cotidiana.
+              Creemos en una forma de entender la atención psicológica que combina el rigor científico con una mirada cercana, humana e individualizada. Entendemos que cada persona es única y que su bienestar depende de la interacción de múltiples factores. Por ello, adaptamos cada proceso de evaluación e intervención a sus necesidades, objetivos y momento vital, acompañándola con respeto, compromiso y sensibilidad a lo largo de todo el proceso.{"\n"}
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <a
@@ -129,7 +128,7 @@ function Home() {
               Cuidamos de tu bienestar emocional y cognitivo
             </h2>
             <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground">
-              Creemos en una atención cercana, rigurosa y personalizada. Acompañamos a niños, adolescentes y adultos desde una perspectiva integradora y basada en la evidencia científica, adaptando cada proceso de evaluación e intervención a las necesidades, objetivos y momento vital de cada persona.
+              {"\n"}
             </p>
           </div>
           <Link
