@@ -51,7 +51,11 @@ function SobreNosotras() {
               </div>
               <h2 className="mt-6 font-serif text-2xl">{p.nombre}</h2>
               <p className="text-sm uppercase tracking-wider text-muted-foreground">{p.rol}</p>
-              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{p.bio}</p>
+              <div className="mt-4 space-y-4 text-sm leading-relaxed text-muted-foreground">
+                {p.bio.split("\n\n").map((parrafo, idx) => (
+                  <p key={idx}>{parrafo}</p>
+                ))}
+              </div>
             </article>
           ))}
         </div>
