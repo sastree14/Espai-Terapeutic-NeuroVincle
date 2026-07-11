@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import ariadnaAsset from "@/assets/ariadna-golsa.jpg.asset.json";
 
 export const Route = createFileRoute("/sobre-nosotras")({
   head: () => ({
