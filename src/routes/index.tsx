@@ -63,8 +63,8 @@ function Home() {
             <h1 className="mt-6 font-serif text-4xl leading-[1.05] text-foreground md:text-6xl">
               Cuidar la mente <em className="text-primary not-italic">hoy</em>, para sostenerla mañana.
             </h1>
-            <p className="mt-6 max-w-xl text-base font-normal leading-relaxed text-muted-foreground md:text-lg whitespace-pre-line">
-              Creemos en una forma de entender la atención psicológica que combina el rigor científico con una mirada cercana, humana e individualizada. Entendemos que cada persona es única y que su bienestar depende de la interacción de múltiples factores. Por ello, adaptamos cada proceso de evaluación e intervención a sus necesidades, objetivos y momento vital, acompañándola con respeto, compromiso y sensibilidad a lo largo de todo el proceso.{"\n"}
+            <p className="mt-6 max-w-xl text-sm leading-relaxed text-muted-foreground">
+              Creemos en una forma de entender la atención psicológica que combina el rigor científico con una mirada cercana, humana e individualizada. Entendemos que cada persona es única y que su bienestar depende de la interacción de múltiples factores. Por ello, adaptamos cada proceso de evaluación e intervención a sus necesidades, objetivos y momento vital, acompañándola con respeto, compromiso y sensibilidad a lo largo de todo el proceso.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <a
