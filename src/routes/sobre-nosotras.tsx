@@ -24,6 +24,7 @@ const equipo = [
     nombre: "Ariadna Golsa Muñoz",
     rol: "Psicóloga General Sanitaria",
     bio: "Soy Psicóloga General Sanitaria, especializada en psicoterapia infantojuvenil y de adultos. Trabajo desde un enfoque integrador, cercano y basado en la evidencia científica, y cuento con formación específica en el abordaje de los trastornos del estado de ánimo.\n\nEntiendo la terapia como un espacio de confianza, escucha y acompañamiento, donde cada persona pueda expresarse con libertad, comprender lo que le ocurre y encontrar herramientas para afrontar sus dificultades. Mi objetivo es ofrecer una atención personalizada, adaptando cada proceso a las necesidades y circunstancias de cada persona.",
+    imagen: ariadnaAsset.url,
     inicial: "A",
   },
 ];
