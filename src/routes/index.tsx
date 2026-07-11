@@ -99,26 +99,6 @@ function Home() {
         </div>
       </section>
 
-      {/* Valores */}
-      <section className="border-y border-border/60 bg-secondary/40">
-        <div className="mx-auto max-w-6xl px-6 py-20">
-          <div className="max-w-2xl">
-            <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">Nuestros valores</p>
-            <h2 className="mt-4 font-serif text-3xl italic font-light leading-tight tracking-tight text-foreground md:text-4xl">
-              Los principios que guían nuestra forma de acompañarte.
-            </h2>
-          </div>
-          <div className="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
-            {valores.map((v) => (
-              <div key={v.titulo} className="border-t border-foreground/20 pt-6">
-                <h3 className="font-serif text-xl">{v.titulo}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{v.texto}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Servicios */}
       <section className="mx-auto max-w-6xl px-6 py-20">
         <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
@@ -145,6 +125,26 @@ function Home() {
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.texto}</p>
             </article>
           ))}
+        </div>
+      </section>
+
+      {/* Valores */}
+      <section className="border-y border-border/60 bg-secondary/40">
+        <div className="mx-auto max-w-6xl px-6 py-20">
+          <div className="max-w-2xl">
+            <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">Nuestros valores</p>
+            <h2 className="mt-4 font-serif text-3xl italic font-light leading-tight tracking-tight text-foreground md:text-4xl">
+              Los principios que guían nuestra forma de acompañarte.
+            </h2>
+          </div>
+          <div className="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+            {valores.map((v) => (
+              <div key={v.titulo} className="border-t border-foreground/20 pt-6">
+                <h3 className="font-serif text-xl">{v.titulo}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{v.texto}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
