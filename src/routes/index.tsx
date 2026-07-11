@@ -123,11 +123,14 @@ function Home() {
       {/* Servicios */}
       <section className="mx-auto max-w-6xl px-6 py-20">
         <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
-          <div className="max-w-xl">
+          <div className="max-w-3xl">
             <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">Servicios</p>
             <h2 className="mt-4 font-serif text-3xl md:text-4xl">
-              Acompañamos cada etapa, desde la prevención hasta el tratamiento.
+              Cuidamos de tu bienestar emocional y cognitivo
             </h2>
+            <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground">
+              Creemos en una atención cercana, rigurosa y personalizada. Acompañamos a niños, adolescentes y adultos desde una perspectiva integradora y basada en la evidencia científica, adaptando cada proceso de evaluación e intervención a las necesidades, objetivos y momento vital de cada persona.
+            </p>
           </div>
           <Link
             to="/servicios"
@@ -138,8 +141,9 @@ function Home() {
         </div>
         <div className="mt-12 grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-2">
           {servicios.map((s) => (
-            <article key={s} className="flex h-full items-center bg-background p-8">
-              <h3 className="font-serif text-xl">{s}</h3>
+            <article key={s.titulo} className="flex h-full flex-col items-start bg-background p-8">
+              <h3 className="font-serif text-xl">{s.titulo}</h3>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.texto}</p>
             </article>
           ))}
         </div>
