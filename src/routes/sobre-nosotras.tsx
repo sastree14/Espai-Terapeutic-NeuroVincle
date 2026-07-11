@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import ariadnaAsset from "@/assets/ariadna-golsa.jpg.asset.json";
 
 export const Route = createFileRoute("/sobre-nosotras")({
   head: () => ({
@@ -23,6 +24,7 @@ const equipo = [
     nombre: "Ariadna Golsa Muñoz",
     rol: "Psicóloga General Sanitaria",
     bio: "Soy Psicóloga General Sanitaria, especializada en psicoterapia infantojuvenil y de adultos. Trabajo desde un enfoque integrador, cercano y basado en la evidencia científica, y cuento con formación específica en el abordaje de los trastornos del estado de ánimo.\n\nEntiendo la terapia como un espacio de confianza, escucha y acompañamiento, donde cada persona pueda expresarse con libertad, comprender lo que le ocurre y encontrar herramientas para afrontar sus dificultades. Mi objetivo es ofrecer una atención personalizada, adaptando cada proceso a las necesidades y circunstancias de cada persona.",
+    imagen: ariadnaAsset.url,
     inicial: "A",
   },
 ];
@@ -46,9 +48,17 @@ function SobreNosotras() {
         <div className="mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-2">
           {equipo.map((p, i) => (
             <article key={p.nombre} className="bg-background p-8 shadow-[0_20px_50px_-30px_rgba(40,30,20,0.25)]">
-              <div className="flex h-20 w-20 items-center justify-center rounded-full border border-primary/30 font-serif text-3xl text-primary">
-                {p.inicial}
-              </div>
+              {p.imagen ? (
+                <img
+                  src={p.imagen}
+                  alt={`Foto de ${p.nombre}`}
+                  className="h-32 w-32 rounded-full object-cover ring-1 ring-border"
+                />
+              ) : (
+                <div className="flex h-20 w-20 items-center justify-center rounded-full border border-primary/30 font-serif text-3xl text-primary">
+                  {p.inicial}
+                </div>
+              )}
               <h2 className="mt-6 font-serif text-2xl">{p.nombre}</h2>
               <p className="text-sm uppercase tracking-wider text-muted-foreground">{p.rol}</p>
               <div className="mt-4 space-y-4 text-sm leading-relaxed text-muted-foreground">
