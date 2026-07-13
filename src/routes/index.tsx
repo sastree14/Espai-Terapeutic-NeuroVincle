@@ -58,7 +58,7 @@ function Home() {
         <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-[1.1fr_1fr] md:items-center md:py-28">
           <div>
             <span className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
-              Neuropsicología · Psicología clínica
+              NEUROPSICOLOGÍA · PSICOLOGÍA
             </span>
             <h1 className="mt-6 font-serif text-4xl leading-[1.05] text-foreground md:text-6xl">
               Cuidar la mente <em className="text-primary not-italic">hoy</em>, para sostenerla mañana.
