@@ -1,5 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
+import logo from "../../public/logo-neuroespai-horizontal.png";
+
 
 const navItems = [
   { to: "/", label: "Inicio" },
@@ -15,16 +17,14 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/85 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link to="/" className="group flex items-center gap-2" onClick={() => setOpen(false)}>
-          <span className="flex h-9 w-9 items-center justify-center rounded-full border border-primary/30 font-serif text-lg text-primary">
-            N
-          </span>
-          <span className="flex flex-col leading-tight">
-            <span className="font-serif text-lg text-foreground">Neuroespai</span>
-            <span className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-              Neuropsicología · Psicología
-            </span>
-          </span>
+        <Link to="/" className="group flex items-center gap-3" onClick={() => setOpen(false)}>
+          <img
+            src={logo}
+            alt="Neuroespai — Psicología y Neuropsicología"
+            width={180}
+            height={48}
+            className="h-10 w-auto"
+          />
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
