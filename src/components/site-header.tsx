@@ -20,7 +20,7 @@ export function SiteHeader() {
             N
           </span>
           <span className="flex flex-col leading-tight">
-            <span className="font-serif text-lg text-foreground">Neuroespai</span>
+            <span className="font-serif text-lg text-foreground uppercase tracking-tight">NEUROESPAI</span>
             <span className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
               Neuropsicología · Psicología
             </span>

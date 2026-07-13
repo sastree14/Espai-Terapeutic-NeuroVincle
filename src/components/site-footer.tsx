@@ -9,7 +9,7 @@ export function SiteFooter() {
             <span className="flex h-9 w-9 items-center justify-center rounded-full border border-primary/30 font-serif text-lg text-primary">
               N
             </span>
-            <span className="font-serif text-lg">Neuroespai</span>
+            <span className="font-serif text-lg uppercase tracking-tight">NEUROESPAI</span>
           </div>
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
             Consulta de neuropsicología y psicología clínica. Acompañamos a personas y familias con
