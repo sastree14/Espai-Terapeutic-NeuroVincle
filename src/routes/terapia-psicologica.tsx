@@ -56,8 +56,7 @@ function TerapiaPsicologica() {
         <div className="mt-10 space-y-10 text-base leading-relaxed text-muted-foreground">
           <p>
             Trabajamos desde una perspectiva integradora, cercana y basada en la evidencia científica.
-            No existen recetas únicas: cada proceso se adapta a la persona, a sus necesidades, a su
-            contexto y a su momento vital.
+            Cada proceso se adapta a la persona, a sus necesidades, a su contexto y a su momento vital.
           </p>
           <p>
             Entendemos la terapia como un espacio de confianza, escucha y acompañamiento. Buscamos
