@@ -21,9 +21,9 @@ export function SiteHeader() {
           <img
             src={logo}
             alt="Neuroespai — Psicología y Neuropsicología"
-            width={180}
-            height={48}
-            className="h-10 w-auto"
+            width={216}
+            height={56}
+            className="h-12 w-auto"
           />
         </Link>
 
