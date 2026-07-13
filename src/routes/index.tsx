@@ -37,18 +37,6 @@ const valores = [
   },
 ];
 
-const servicios = [
-  {
-    titulo: "Psicoterapia",
-    texto:
-      "Ofrecemos un espacio de confianza donde comprender lo que está ocurriendo, afrontar las dificultades emocionales y desarrollar herramientas que favorezcan el bienestar y el crecimiento personal. Trabajamos mediante intervenciones individualizadas, adaptadas a las características y objetivos de cada persona.",
-  },
-  {
-    titulo: "Neuropsicología",
-    texto:
-      "Disponemos de un área especializada en evaluación y rehabilitación neuropsicológica. Valoramos el funcionamiento cognitivo mediante herramientas estandarizadas y diseñamos programas de intervención personalizados para potenciar, recuperar o compensar funciones como la atención, la memoria, el lenguaje o las funciones ejecutivas, favoreciendo la autonomía y el desempeño en la vida cotidiana.",
-  },
-];
 
 function Home() {
   return (
