@@ -11,7 +11,6 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TerapiaPsicologicaRouteImport } from './routes/terapia-psicologica'
 import { Route as SobreNosotrasRouteImport } from './routes/sobre-nosotras'
-import { Route as ServiciosRouteImport } from './routes/servicios'
 import { Route as NeuropsicologiaRouteImport } from './routes/neuropsicologia'
 import { Route as ContactoRouteImport } from './routes/contacto'
 import { Route as IndexRouteImport } from './routes/index'
@@ -24,11 +23,6 @@ const TerapiaPsicologicaRoute = TerapiaPsicologicaRouteImport.update({
 const SobreNosotrasRoute = SobreNosotrasRouteImport.update({
   id: '/sobre-nosotras',
   path: '/sobre-nosotras',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ServiciosRoute = ServiciosRouteImport.update({
-  id: '/servicios',
-  path: '/servicios',
   getParentRoute: () => rootRouteImport,
 } as any)
 const NeuropsicologiaRoute = NeuropsicologiaRouteImport.update({
@@ -51,7 +45,6 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/contacto': typeof ContactoRoute
   '/neuropsicologia': typeof NeuropsicologiaRoute
-  '/servicios': typeof ServiciosRoute
   '/sobre-nosotras': typeof SobreNosotrasRoute
   '/terapia-psicologica': typeof TerapiaPsicologicaRoute
 }
@@ -59,7 +52,6 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/contacto': typeof ContactoRoute
   '/neuropsicologia': typeof NeuropsicologiaRoute
-  '/servicios': typeof ServiciosRoute
   '/sobre-nosotras': typeof SobreNosotrasRoute
   '/terapia-psicologica': typeof TerapiaPsicologicaRoute
 }
@@ -68,7 +60,6 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/contacto': typeof ContactoRoute
   '/neuropsicologia': typeof NeuropsicologiaRoute
-  '/servicios': typeof ServiciosRoute
   '/sobre-nosotras': typeof SobreNosotrasRoute
   '/terapia-psicologica': typeof TerapiaPsicologicaRoute
 }
@@ -78,7 +69,6 @@ export interface FileRouteTypes {
     | '/'
     | '/contacto'
     | '/neuropsicologia'
-    | '/servicios'
     | '/sobre-nosotras'
     | '/terapia-psicologica'
   fileRoutesByTo: FileRoutesByTo
@@ -86,7 +76,6 @@ export interface FileRouteTypes {
     | '/'
     | '/contacto'
     | '/neuropsicologia'
-    | '/servicios'
     | '/sobre-nosotras'
     | '/terapia-psicologica'
   id:
@@ -94,7 +83,6 @@ export interface FileRouteTypes {
     | '/'
     | '/contacto'
     | '/neuropsicologia'
-    | '/servicios'
     | '/sobre-nosotras'
     | '/terapia-psicologica'
   fileRoutesById: FileRoutesById
@@ -103,7 +91,6 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ContactoRoute: typeof ContactoRoute
   NeuropsicologiaRoute: typeof NeuropsicologiaRoute
-  ServiciosRoute: typeof ServiciosRoute
   SobreNosotrasRoute: typeof SobreNosotrasRoute
   TerapiaPsicologicaRoute: typeof TerapiaPsicologicaRoute
 }
@@ -122,13 +109,6 @@ declare module '@tanstack/react-router' {
       path: '/sobre-nosotras'
       fullPath: '/sobre-nosotras'
       preLoaderRoute: typeof SobreNosotrasRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/servicios': {
-      id: '/servicios'
-      path: '/servicios'
-      fullPath: '/servicios'
-      preLoaderRoute: typeof ServiciosRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/neuropsicologia': {
@@ -159,7 +139,6 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ContactoRoute: ContactoRoute,
   NeuropsicologiaRoute: NeuropsicologiaRoute,
-  ServiciosRoute: ServiciosRoute,
   SobreNosotrasRoute: SobreNosotrasRoute,
   TerapiaPsicologicaRoute: TerapiaPsicologicaRoute,
 }

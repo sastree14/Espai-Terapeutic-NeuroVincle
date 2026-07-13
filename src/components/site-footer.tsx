@@ -22,8 +22,8 @@ export function SiteFooter() {
           <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
             <li><Link to="/" className="hover:text-foreground">Inicio</Link></li>
             <li><Link to="/sobre-nosotras" className="hover:text-foreground">Sobre nosotras</Link></li>
-            <li><Link to="/servicios" className="hover:text-foreground">Servicios</Link></li>
             <li><Link to="/neuropsicologia" className="hover:text-foreground">Neuropsicología</Link></li>
+            <li><Link to="/terapia-psicologica" className="hover:text-foreground">Terapia psicológica</Link></li>
             <li><Link to="/contacto" className="hover:text-foreground">Contacto</Link></li>
           </ul>
         </div>

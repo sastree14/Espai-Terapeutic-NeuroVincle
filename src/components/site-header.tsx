@@ -4,7 +4,6 @@ import { useState } from "react";
 const navItems = [
   { to: "/", label: "Inicio" },
   { to: "/sobre-nosotras", label: "Sobre nosotras" },
-  { to: "/servicios", label: "Servicios" },
   { to: "/neuropsicologia", label: "Neuropsicología" },
   { to: "/terapia-psicologica", label: "Terapia psicológica" },
   { to: "/contacto", label: "Contacto" },

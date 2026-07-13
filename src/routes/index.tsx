@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import heroImg from "../assets/hero-consulta.jpg";
 
 
@@ -37,18 +37,6 @@ const valores = [
   },
 ];
 
-const servicios = [
-  {
-    titulo: "Psicoterapia",
-    texto:
-      "Ofrecemos un espacio de confianza donde comprender lo que está ocurriendo, afrontar las dificultades emocionales y desarrollar herramientas que favorezcan el bienestar y el crecimiento personal. Trabajamos mediante intervenciones individualizadas, adaptadas a las características y objetivos de cada persona.",
-  },
-  {
-    titulo: "Neuropsicología",
-    texto:
-      "Disponemos de un área especializada en evaluación y rehabilitación neuropsicológica. Valoramos el funcionamiento cognitivo mediante herramientas estandarizadas y diseñamos programas de intervención personalizados para potenciar, recuperar o compensar funciones como la atención, la memoria, el lenguaje o las funciones ejecutivas, favoreciendo la autonomía y el desempeño en la vida cotidiana.",
-  },
-];
 
 function Home() {
   return (
@@ -75,12 +63,6 @@ function Home() {
               >
                 Reservar primera visita
               </a>
-              <Link
-                to="/servicios"
-                className="inline-flex items-center text-sm font-medium text-foreground underline-offset-4 hover:underline"
-              >
-                Ver servicios →
-              </Link>
             </div>
           </div>
 
@@ -99,34 +81,6 @@ function Home() {
         </div>
       </section>
 
-      {/* Servicios */}
-      <section className="mx-auto max-w-6xl px-6 py-20">
-        <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
-          <div className="max-w-3xl">
-            <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">Servicios</p>
-            <h2 className="mt-4 font-serif text-3xl md:text-4xl">
-              Cuidamos de tu bienestar emocional y cognitivo
-            </h2>
-            <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground">
-              {"\n"}
-            </p>
-          </div>
-          <Link
-            to="/servicios"
-            className="text-sm font-medium text-foreground underline-offset-4 hover:underline"
-          >
-            Ver todos los servicios →
-          </Link>
-        </div>
-        <div className="mt-12 grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-2">
-          {servicios.map((s) => (
-            <article key={s.titulo} className="flex h-full flex-col items-start bg-background p-8">
-              <h3 className="font-serif text-xl">{s.titulo}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.texto}</p>
-            </article>
-          ))}
-        </div>
-      </section>
 
       {/* Valores */}
       <section className="border-y border-border/60 bg-secondary/40">
