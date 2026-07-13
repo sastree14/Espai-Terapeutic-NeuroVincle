@@ -24,7 +24,7 @@ const items = [
     incluye: ["Plan individualizado", "Sesiones semanales", "Material para casa"],
   },
   {
-    titulo: "Psicología clínica adultos",
+    titulo: "Terapia psicologica",
     quien: "Ansiedad, ánimo bajo, duelo, autoestima, momentos vitales complejos.",
     incluye: ["Enfoque integrador", "Sesiones de 50 min", "Presencial u online"],
   },
