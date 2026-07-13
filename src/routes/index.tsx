@@ -75,12 +75,6 @@ function Home() {
               >
                 Reservar primera visita
               </a>
-              <Link
-                to="/servicios"
-                className="inline-flex items-center text-sm font-medium text-foreground underline-offset-4 hover:underline"
-              >
-                Ver servicios →
-              </Link>
             </div>
           </div>
 
