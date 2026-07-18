@@ -1,13 +1,14 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import janaAsset from "@/assets/jana-cara.jpg.asset.json";
 import ariadnaAsset from "@/assets/ariadna-golsa.jpg.asset.json";
 
 export const Route = createFileRoute("/sobre-nosotras")({
   head: () => ({
     meta: [
       { title: "Sobre nosotras — Neuroespai" },
-      { name: "description", content: "Conoce al equipo de Neuroespai: dos neuropsicólogas y psicólogas clínicas con vocación, formación rigurosa y trato cercano." },
+      { name: "description", content: "Conoce al equipo de Neuroespai: una neuropsicóloga y una psicóloga general sanitaria, con formación rigurosa y trato cercano." },
       { property: "og:title", content: "Sobre nosotras — Neuroespai" },
-      { property: "og:description", content: "Dos profesionales con formación en neuropsicología y psicología clínica." },
+      { property: "og:description", content: "Una neuropsicóloga y una psicóloga general sanitaria acompañan personas y familias con vocación y rigor." },
     ],
   }),
   component: SobreNosotras,
@@ -15,10 +16,11 @@ export const Route = createFileRoute("/sobre-nosotras")({
 
 const equipo = [
   {
-    nombre: "Profesional 1",
-    rol: "Neuropsicóloga · Psicóloga clínica",
-    bio: "Especializada en evaluación neuropsicológica del adulto y prevención del deterioro cognitivo. Formación universitaria en Psicología y máster en Neuropsicología clínica.",
-    inicial: "·",
+    nombre: "Jana",
+    rol: "Neuropsicóloga",
+    bio: "Soy graduada en Psicología y cuento con un Máster en Neuropsicología. Mi trabajo se centra en la evaluación neuropsicológica, la estimulación cognitiva y la rehabilitación, siempre desde un enfoque cercano, individualizado y basado en la evidencia científica.\n\nAcompaño a personas que presentan alteraciones cognitivas derivadas de ictus, traumatismos craneoencefálicos, enfermedades neurodegenerativas u otras condiciones neurológicas, diseñando programas de intervención adaptados a las necesidades de cada persona. Asimismo, considero fundamental el acompañamiento y la orientación a las familias, proporcionando herramientas que favorezcan la comprensión del proceso y la participación activa en la intervención.",
+    imagen: janaAsset.url,
+    inicial: "J",
   },
   {
     nombre: "Ariadna Golsa Muñoz",
