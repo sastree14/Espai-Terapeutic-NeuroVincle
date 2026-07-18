@@ -15,10 +15,10 @@ export const Route = createFileRoute("/sobre-nosotras")({
 
 const equipo = [
   {
-    nombre: "Profesional 1",
-    rol: "Neuropsicóloga · Psicóloga clínica",
-    bio: "Especializada en evaluación neuropsicológica del adulto y prevención del deterioro cognitivo. Formación universitaria en Psicología y máster en Neuropsicología clínica.",
-    inicial: "·",
+    nombre: "Jana",
+    rol: "Neuropsicóloga",
+    bio: "Soy graduada en Psicología y cuento con un Máster en Neuropsicología. Mi trabajo se centra en la evaluación neuropsicológica, la estimulación cognitiva y la rehabilitación, siempre desde un enfoque cercano, individualizado y basado en la evidencia científica.\n\nAcompaño a personas que presentan alteraciones cognitivas derivadas de ictus, traumatismos craneoencefálicos, enfermedades neurodegenerativas u otras condiciones neurológicas, diseñando programas de intervención adaptados a las necesidades de cada persona. Asimismo, considero fundamental el acompañamiento y la orientación a las familias, proporcionando herramientas que favorezcan la comprensión del proceso y la participación activa en la intervención.",
+    inicial: "J",
   },
   {
     nombre: "Ariadna Golsa Muñoz",
