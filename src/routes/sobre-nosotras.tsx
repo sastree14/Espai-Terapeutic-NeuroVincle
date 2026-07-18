@@ -6,9 +6,9 @@ export const Route = createFileRoute("/sobre-nosotras")({
   head: () => ({
     meta: [
       { title: "Sobre nosotras — Neuroespai" },
-      { name: "description", content: "Conoce al equipo de Neuroespai: dos neuropsicólogas y psicólogas clínicas con vocación, formación rigurosa y trato cercano." },
+      { name: "description", content: "Conoce al equipo de Neuroespai: una neuropsicóloga y una psicóloga general sanitaria, con formación rigurosa y trato cercano." },
       { property: "og:title", content: "Sobre nosotras — Neuroespai" },
-      { property: "og:description", content: "Dos profesionales con formación en neuropsicología y psicología clínica." },
+      { property: "og:description", content: "Una neuropsicóloga y una psicóloga general sanitaria acompañan personas y familias con vocación y rigor." },
     ],
   }),
   component: SobreNosotras,
