@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import janaAsset from "@/assets/jana-cara.jpg.asset.json";
+import janaAsset from "@/assets/jana-cara.png.asset.json";
 import ariadnaAsset from "@/assets/ariadna-golsa.jpg.asset.json";
 
 export const Route = createFileRoute("/sobre-nosotras")({
