@@ -18,7 +18,7 @@ const equipo = [
   {
     nombre: "Jana Oró",
     rol: "Neuropsicóloga",
-    bio: "Soy neuropsicóloga, graduada en Psicología y con un Máster en Neuropsicología. Mi trabajo se centra en la evaluación neuropsicológica, la estimulación cognitiva y la rehabilitación, siempre desde un enfoque cercano, individualizado y basado en la evidencia científica.\n\nAcompaño a personas que presentan alteraciones cognitivas derivadas de ictus, traumatismos craneoencefálicos, enfermedades neurodegenerativas u otras condiciones neurológicas, diseñando programas de intervención adaptados a las necesidades de cada persona. Asimismo, considero fundamental el acompañamiento y la orientación a las familias, proporcionando herramientas que favorezcan la comprensión del proceso y la participación activa en la intervención.",
+    bio: "Soy neuropsicóloga. Mi trabajo se centra en la evaluación neuropsicológica, la estimulación cognitiva y la rehabilitación, siempre desde un enfoque cercano, individualizado y basado en la evidencia científica.\n\nAcompaño a personas que presentan alteraciones cognitivas derivadas de ictus, traumatismos craneoencefálicos, enfermedades neurodegenerativas u otras condiciones neurológicas, diseñando programas de intervención adaptados a las necesidades de cada persona. Asimismo, considero fundamental el acompañamiento y la orientación a las familias, proporcionando herramientas que favorezcan la comprensión del proceso y la participación activa en la intervención.",
     imagen: janaAsset.url,
     inicial: "J",
   },
