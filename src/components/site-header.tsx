@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
+import { Logo } from "./logo";
 
 const navItems = [
   { to: "/", label: "Inicio" },
@@ -14,14 +15,12 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/85 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link to="/" className="group flex items-center gap-2" onClick={() => setOpen(false)}>
-          <span className="flex h-9 w-9 items-center justify-center rounded-full border border-primary/30 font-serif text-lg text-primary">
-            N
-          </span>
+        <Link to="/" className="group flex items-center gap-2.5" onClick={() => setOpen(false)}>
+          <Logo className="h-9 w-9 text-primary" aria-hidden="true" />
           <span className="flex flex-col leading-tight">
-            <span className="font-serif text-lg text-foreground uppercase tracking-tight">NEUROESPAI</span>
+            <span className="font-serif text-lg tracking-tight text-foreground">NeuroVincle</span>
             <span className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-              Neuropsicología · Psicología
+              Neuropsicología · Psicología clínica
             </span>
           </span>
         </Link>

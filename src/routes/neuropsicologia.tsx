@@ -3,9 +3,9 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 export const Route = createFileRoute("/neuropsicologia")({
   head: () => ({
     meta: [
-      { title: "Neuropsicología y prevención — Neuroespai" },
+      { title: "Neuropsicología y prevención — NeuroVincle" },
       { name: "description", content: "Reserva cognitiva, prevención del Alzheimer y enfermedades neurodegenerativas: nuestro enfoque clínico." },
-      { property: "og:title", content: "Neuropsicología y prevención — Neuroespai" },
+      { property: "og:title", content: "Neuropsicología y prevención — NeuroVincle" },
       { property: "og:description", content: "Por qué la prevención y la estimulación cognitiva importan, y cómo trabajamos con ellas." },
     ],
   }),

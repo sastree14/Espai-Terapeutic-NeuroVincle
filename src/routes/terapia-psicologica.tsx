@@ -3,9 +3,9 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 export const Route = createFileRoute("/terapia-psicologica")({
   head: () => ({
     meta: [
-      { title: "Terapia psicológica — Neuroespai" },
+      { title: "Terapia psicológica — NeuroVincle" },
       { name: "description", content: "Psicoterapia infantojuvenil y de adultos con un enfoque integrador, cercano y basado en la evidencia científica." },
-      { property: "og:title", content: "Terapia psicológica — Neuroespai" },
+      { property: "og:title", content: "Terapia psicológica — NeuroVincle" },
       { property: "og:description", content: "Acompañamiento terapéutico personalizado para niños, adolescentes y adultos." },
     ],
   }),

@@ -5,9 +5,9 @@ import heroImg from "../assets/hero-consulta.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Neuroespai — Neuropsicología y Psicología Clínica" },
+      { title: "NeuroVincle — Neuropsicología y Psicología Clínica" },
       { name: "description", content: "Consulta de neuropsicología y psicología clínica. Evaluación, prevención y terapia con honestidad, transparencia y vocación." },
-      { property: "og:title", content: "Neuroespai — Neuropsicología y Psicología Clínica" },
+      { property: "og:title", content: "NeuroVincle — Neuropsicología y Psicología Clínica" },
       { property: "og:description", content: "Evaluación cognitiva, prevención del deterioro y acompañamiento terapéutico. Presencial y online." },
     ],
   }),
