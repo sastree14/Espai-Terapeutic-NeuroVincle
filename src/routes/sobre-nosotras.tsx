@@ -5,9 +5,9 @@ import ariadnaAsset from "@/assets/ariadna-golsa.jpg.asset.json";
 export const Route = createFileRoute("/sobre-nosotras")({
   head: () => ({
     meta: [
-      { title: "Sobre nosotras — Neuroespai" },
-      { name: "description", content: "Conoce al equipo de Neuroespai: una neuropsicóloga y una psicóloga general sanitaria, con formación rigurosa y trato cercano." },
-      { property: "og:title", content: "Sobre nosotras — Neuroespai" },
+      { title: "Sobre nosotras — NeuroVincle" },
+      { name: "description", content: "Conoce al equipo de NeuroVincle: una neuropsicóloga y una psicóloga general sanitaria, con formación rigurosa y trato cercano." },
+      { property: "og:title", content: "Sobre nosotras — NeuroVincle" },
       { property: "og:description", content: "Una neuropsicóloga y una psicóloga general sanitaria acompañan personas y familias con vocación y rigor." },
     ],
   }),

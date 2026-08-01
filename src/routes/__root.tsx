@@ -79,9 +79,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Neuroespai — Neuropsicología y Psicología Clínica" },
+      { title: "NeuroVincle — Neuropsicología y Psicología Clínica" },
       { name: "description", content: "Consulta de neuropsicología y psicología clínica. Evaluación cognitiva, prevención del deterioro y acompañamiento terapéutico con honestidad y vocación." },
-      { property: "og:title", content: "Neuroespai — Neuropsicología y Psicología Clínica" },
+      { property: "og:title", content: "NeuroVincle — Neuropsicología y Psicología Clínica" },
       { property: "og:description", content: "Evaluación, prevención y terapia. Acompañamos a personas y familias con rigor clínico y cercanía." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

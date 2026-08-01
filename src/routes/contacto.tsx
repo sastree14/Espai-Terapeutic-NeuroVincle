@@ -3,9 +3,9 @@ import { createFileRoute } from "@tanstack/react-router";
 export const Route = createFileRoute("/contacto")({
   head: () => ({
     meta: [
-      { title: "Contacto — Neuroespai" },
+      { title: "Contacto — NeuroVincle" },
       { name: "description", content: "Reserva una primera visita o escríbenos por email. Atención presencial y online." },
-      { property: "og:title", content: "Contacto — Neuroespai" },
+      { property: "og:title", content: "Contacto — NeuroVincle" },
       { property: "og:description", content: "Reserva una primera visita o contacta por email." },
     ],
   }),
