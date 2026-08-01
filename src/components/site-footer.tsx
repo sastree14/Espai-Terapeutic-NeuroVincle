@@ -1,15 +1,14 @@
 import { Link } from "@tanstack/react-router";
+import { Logo } from "./logo";
 
 export function SiteFooter() {
   return (
     <footer className="border-t border-border/60 bg-secondary/40">
       <div className="mx-auto grid max-w-6xl gap-10 px-6 py-14 md:grid-cols-3">
         <div>
-          <div className="flex items-center gap-2">
-            <span className="flex h-9 w-9 items-center justify-center rounded-full border border-primary/30 font-serif text-lg text-primary">
-              N
-            </span>
-            <span className="font-serif text-lg uppercase tracking-tight">NEUROESPAI</span>
+          <div className="flex items-center gap-2.5">
+            <Logo className="h-9 w-9 text-primary" aria-hidden="true" />
+            <span className="font-serif text-lg tracking-tight">NeuroVincle</span>
           </div>
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
             Consulta de neuropsicología y psicología clínica. Acompañamos a personas y familias con
@@ -52,7 +51,7 @@ export function SiteFooter() {
       </div>
       <div className="border-t border-border/50">
         <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-2 px-6 py-5 text-xs text-muted-foreground md:flex-row md:items-center">
-          <span>© {new Date().getFullYear()} Neuroespai. Todos los derechos reservados.</span>
+          <span>© {new Date().getFullYear()} NeuroVincle. Todos los derechos reservados.</span>
           <span>Col. nº pendiente · Atención clínica con perspectiva ética.</span>
         </div>
       </div>
