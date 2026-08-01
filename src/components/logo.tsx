@@ -11,38 +11,38 @@ export const Logo = forwardRef<SVGSVGElement, SVGProps<SVGSVGElement>>(
         className={className}
         {...props}
       >
-        {/* Connecting arcs */}
+        {/* Soft arcs forming a balanced triangle */}
         <path
-          d="M24 10c-8 0-15 6-17 14"
+          d="M24 7A17.33 17.33 0 0 1 9 33"
           stroke="currentColor"
-          strokeWidth="2.5"
-          strokeLinecap="round"
-          className="text-clay/60"
-        />
-        <path
-          d="M24 10c8 0 15 6 17 14"
-          stroke="currentColor"
-          strokeWidth="2.5"
+          strokeWidth="2"
           strokeLinecap="round"
           className="text-foreground/40"
         />
         <path
-          d="M7 24c0 9 8 17 17 17s17-8 17-17"
+          d="M9 33A17.33 17.33 0 0 1 39 33"
           stroke="currentColor"
-          strokeWidth="2.5"
+          strokeWidth="2"
           strokeLinecap="round"
           className="text-clay/80"
         />
-        {/* Three dots */}
-        <circle cx="24" cy="10" r="4.5" className="fill-foreground" />
+        <path
+          d="M39 33A17.33 17.33 0 0 1 24 7"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          className="text-clay/60"
+        />
+        {/* Three nodes */}
+        <circle cx="24" cy="7" r="3.5" className="fill-foreground" />
         <circle
           cx="9"
-          cy="24"
-          r="4.5"
+          cy="33"
+          r="3.5"
           className="fill-cream stroke-foreground/30"
           strokeWidth="1.5"
         />
-        <circle cx="39" cy="24" r="4.5" className="fill-clay" />
+        <circle cx="39" cy="33" r="3.5" className="fill-clay" />
       </svg>
     );
   }
