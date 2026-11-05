@@ -1,12 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
 import heroImg from "../assets/hero-consulta.jpg";
+import { siteConfig } from "../lib/site-config";
 
 
 export const Route = createFileRoute("/")({
   head: () => ({
+    links: [{ rel: "canonical", href: "https://neurovincle.es/" }],
     meta: [
-      { title: "NeuroVincle — Neuropsicología y Psicología Clínica" },
-      { name: "description", content: "Consulta de neuropsicología y psicología clínica. Evaluación, prevención y terapia con honestidad, transparencia y vocación." },
+      { property: "og:url", content: "https://neurovincle.es/" },
+      { title: "NeuroVincle — Neuropsicología y Psicología" },
+      { name: "description", content: "Atención de neuropsicología y psicología para personas y familias. Evaluación, intervención y acompañamiento personalizado." },
       { property: "og:title", content: "NeuroVincle — Neuropsicología y Psicología Clínica" },
       { property: "og:description", content: "Evaluación cognitiva, prevención del deterioro y acompañamiento terapéutico. Presencial y online." },
     ],
@@ -56,7 +59,7 @@ function Home() {
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <a
-                href="https://calendly.com/neuroespai/primera-visita"
+                href={siteConfig.bookingUrl}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition hover:opacity-90"
@@ -72,6 +75,8 @@ function Home() {
               alt="Consulta de neuropsicología con luz natural"
               width={1600}
               height={1200}
+              fetchPriority="high"
+              decoding="async"
               className="aspect-[4/5] w-full rounded-sm object-cover shadow-[0_30px_60px_-30px_rgba(40,30,20,0.35)]"
             />
             <figcaption className="mt-3 text-xs italic text-muted-foreground">
@@ -121,7 +126,7 @@ function Home() {
             Reservar primera visita
           </a>
           <a
-            href="mailto:hola@neuroespai.com"
+            href={`mailto:${siteConfig.contactEmail}`}
             className="inline-flex items-center rounded-full border border-foreground/20 px-6 py-3 text-sm font-medium text-foreground transition hover:bg-foreground hover:text-background"
           >
             Escribir por email

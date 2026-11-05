@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Logo } from "./logo";
+import { siteConfig } from "../lib/site-config";
 
 export function SiteFooter() {
   return (
@@ -11,7 +12,7 @@ export function SiteFooter() {
             <span className="font-serif text-lg tracking-tight">NeuroVincle</span>
           </div>
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
-            Consulta de neuropsicología y psicología clínica. Acompañamos a personas y familias con
+            Atención de neuropsicología y psicología. Acompañamos a personas y familias con
             honestidad, rigor y vocación.
           </p>
         </div>
@@ -31,13 +32,13 @@ export function SiteFooter() {
           <h4 className="font-serif text-base">Contacto</h4>
           <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
             <li>
-              <a href="mailto:hola@neuroespai.com" className="hover:text-foreground">
-                hola@neuroespai.com
+              <a href={`mailto:${siteConfig.contactEmail}`} className="hover:text-foreground">
+                {siteConfig.contactEmail}
               </a>
             </li>
             <li>
               <a
-                href="https://calendly.com/neuroespai/primera-visita"
+                href={siteConfig.bookingUrl}
                 target="_blank"
                 rel="noreferrer"
                 className="hover:text-foreground"
@@ -52,7 +53,7 @@ export function SiteFooter() {
       <div className="border-t border-border/50">
         <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-2 px-6 py-5 text-xs text-muted-foreground md:flex-row md:items-center">
           <span>© {new Date().getFullYear()} NeuroVincle. Todos los derechos reservados.</span>
-          <span>Col. nº pendiente · Atención clínica con perspectiva ética.</span>
+          <span>Neuropsicología y psicología · Atención centrada en las personas.</span>
         </div>
       </div>
     </footer>

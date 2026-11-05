@@ -2,9 +2,11 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/neuropsicologia")({
   head: () => ({
+    links: [{ rel: "canonical", href: "https://neurovincle.es/neuropsicologia" }],
     meta: [
+      { property: "og:url", content: "https://neurovincle.es/neuropsicologia" },
       { title: "Neuropsicología y prevención — NeuroVincle" },
-      { name: "description", content: "Reserva cognitiva, prevención del Alzheimer y enfermedades neurodegenerativas: nuestro enfoque clínico." },
+      { name: "description", content: "Evaluación neuropsicológica, estimulación cognitiva, rehabilitación y orientación a familias." },
       { property: "og:title", content: "Neuropsicología y prevención — NeuroVincle" },
       { property: "og:description", content: "Por qué la prevención y la estimulación cognitiva importan, y cómo trabajamos con ellas." },
     ],
@@ -21,9 +23,9 @@ function Neuropsicologia() {
           Cuidar el cerebro es un trabajo de años, no de semanas.
         </h1>
         <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-          Las enfermedades neurodegenerativas, como el Alzheimer, no aparecen de un día para otro.
-          Su origen está años antes de los primeros síntomas. Por eso entendemos la neuropsicología
-          como una disciplina clínica y, también, profundamente preventiva.
+          Los cambios cognitivos pueden tener causas muy diferentes. La valoración profesional permite
+          comprender las necesidades de cada persona, orientar el seguimiento y proponer apoyos
+          adaptados a su situación.
         </p>
       </section>
 
@@ -36,7 +38,7 @@ function Neuropsicologia() {
             },
             {
               t: "Prevención",
-              d: "Detectar cambios sutiles a tiempo, ajustar hábitos y entrenar funciones cognitivas concretas permite ganar años de calidad de vida.",
+              d: "La evaluación temprana de cambios cognitivos puede ayudar a orientar el seguimiento, adaptar hábitos y valorar apoyos adecuados para cada persona.",
             },
             {
               t: "Intervención",
@@ -65,8 +67,8 @@ function Neuropsicologia() {
             actividad social) y qué apoyos necesita la familia para sostener el proceso.
           </p>
           <p>
-            Y, sobre todo, te lo contamos como es. No prometemos curar lo incurable; sí podemos
-            ayudarte a entender qué pasa, ganar tiempo y vivir mejor el tiempo que ganamos.
+            Y, sobre todo, te lo contamos como es. No prometemos resultados imposibles; buscamos ayudarte a comprender qué sucede y
+            encontrar estrategias realistas para favorecer tu bienestar.
           </p>
         </div>
 

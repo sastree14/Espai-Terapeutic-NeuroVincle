@@ -2,7 +2,9 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/terapia-psicologica")({
   head: () => ({
+    links: [{ rel: "canonical", href: "https://neurovincle.es/terapia-psicologica" }],
     meta: [
+      { property: "og:url", content: "https://neurovincle.es/terapia-psicologica" },
       { title: "Terapia psicológica — NeuroVincle" },
       { name: "description", content: "Psicoterapia infantojuvenil y de adultos con un enfoque integrador, cercano y basado en la evidencia científica." },
       { property: "og:title", content: "Terapia psicológica — NeuroVincle" },
