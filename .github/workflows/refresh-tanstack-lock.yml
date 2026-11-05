@@ -47,7 +47,7 @@ jobs:
               "@tanstack/start-server-core": "1.169.39",
           }
           for name, minimum in checks.items():
-              found = re.search(r'"' + "'"+re.escape(name)+r'": \["'+re.escape(name)+r'@(\d+\.\d+\.\d+)', lock)
+              found = re.search(rf'"{re.escape(name)}": \["{re.escape(name)}@(\d+\.\d+\.\d+)', lock)
               if not found:
                   raise SystemExit(f"{name} not resolved in bun.lock")
               version = found.group(1)
