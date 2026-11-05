@@ -79,6 +79,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
+      // Prelanzamiento: impedir indexación sin bloquear el acceso con un enlace.
+      { name: "robots", content: "noindex, nofollow, noarchive, nosnippet" },
+      { name: "googlebot", content: "noindex, nofollow, noarchive, nosnippet" },
       { title: "NeuroVincle — Neuropsicología y Psicología" },
       { name: "description", content: "Neuropsicología y psicología. Evaluación cognitiva, acompañamiento terapéutico y atención a personas y familias." },
       { property: "og:title", content: "NeuroVincle — Neuropsicología y Psicología" },
