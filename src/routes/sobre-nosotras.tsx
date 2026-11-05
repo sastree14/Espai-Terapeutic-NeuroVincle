@@ -4,7 +4,9 @@ import ariadnaAsset from "@/assets/ariadna-golsa.jpg.asset.json";
 
 export const Route = createFileRoute("/sobre-nosotras")({
   head: () => ({
+    links: [{ rel: "canonical", href: "https://neurovincle.es/sobre-nosotras" }],
     meta: [
+      { property: "og:url", content: "https://neurovincle.es/sobre-nosotras" },
       { title: "Sobre nosotras — NeuroVincle" },
       { name: "description", content: "Conoce al equipo de NeuroVincle: una neuropsicóloga y una psicóloga general sanitaria, con formación rigurosa y trato cercano." },
       { property: "og:title", content: "Sobre nosotras — NeuroVincle" },
@@ -55,6 +57,8 @@ function SobreNosotras() {
                   src={p.imagen}
                   alt={`Foto de ${p.nombre}`}
                   className="h-32 w-32 rounded-full object-cover ring-1 ring-border"
+                  loading="lazy"
+                  decoding="async"
                 />
               ) : (
                 <div className="flex h-20 w-20 items-center justify-center rounded-full border border-primary/30 font-serif text-3xl text-primary">

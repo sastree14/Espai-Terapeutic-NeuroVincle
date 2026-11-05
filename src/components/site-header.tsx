@@ -20,12 +20,12 @@ export function SiteHeader() {
           <span className="flex flex-col leading-tight">
             <span className="font-serif text-lg tracking-tight text-foreground">NeuroVincle</span>
             <span className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-              Neuropsicología · Psicología clínica
+              Neuropsicología · Psicología
             </span>
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav aria-label="Navegación principal" className="hidden items-center gap-8 md:flex">
           {navItems.map((item) => (
             <Link
               key={item.to}
@@ -47,7 +47,9 @@ export function SiteHeader() {
 
         <button
           type="button"
-          aria-label="Abrir menú"
+          aria-label={open ? "Cerrar menú" : "Abrir menú"}
+          aria-expanded={open}
+          aria-controls="menu-movil"
           onClick={() => setOpen((v) => !v)}
           className="flex h-10 w-10 items-center justify-center rounded-md border border-border md:hidden"
         >
@@ -61,7 +63,7 @@ export function SiteHeader() {
 
       {open && (
         <div className="border-t border-border/60 bg-background md:hidden">
-          <nav className="mx-auto flex max-w-6xl flex-col px-6 py-4">
+          <nav id="menu-movil" aria-label="Navegación móvil" className="mx-auto flex max-w-6xl flex-col px-6 py-4">
             {navItems.map((item) => (
               <Link
                 key={item.to}
