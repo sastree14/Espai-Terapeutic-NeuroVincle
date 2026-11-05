@@ -1,4 +1,4 @@
+# Prelanzamiento de NeuroVincle: permitir a buscadores ver las directivas noindex.
+# No usar Disallow: /, porque impediria que los bots leyesen noindex.
 User-agent: *
 Allow: /
-
-Sitemap: https://neurovincle.es/sitemap.xml
