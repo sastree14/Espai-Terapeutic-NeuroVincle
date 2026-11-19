@@ -13,23 +13,21 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SiteHeader } from "../components/site-header";
 import { SiteFooter } from "../components/site-footer";
+import { LanguageProvider, useT } from "../lib/i18n";
 
 function NotFoundComponent() {
+  const t = useT();
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
         <h1 className="text-7xl font-bold text-foreground">404</h1>
-        <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
-        <p className="mt-2 text-sm text-muted-foreground">
-          La página que buscas no existe o ha cambiado de dirección.
-        </p>
+        <h2 className="mt-4 text-xl font-semibold text-foreground">{t("Page not found")}</h2>
+        <p className="mt-2 text-sm text-muted-foreground">{t("La página que buscas no existe o ha cambiado de dirección.")}</p>
         <div className="mt-6">
           <Link
             to="/"
             className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-          >
-            Volver al inicio
-          </Link>
+          >{t("Volver al inicio")}</Link>
         </div>
       </div>
     </div>
@@ -38,6 +36,7 @@ function NotFoundComponent() {
 
 function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   console.error(error);
+  const t = useT();
   const router = useRouter();
   useEffect(() => {
     reportLovableError(error, { boundary: "tanstack_root_error_component" });
@@ -46,12 +45,8 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
-        <h1 className="text-xl font-semibold tracking-tight text-foreground">
-          No se ha podido cargar esta página
-        </h1>
-        <p className="mt-2 text-sm text-muted-foreground">
-          Se ha producido un error. Puedes volver a intentarlo o regresar al inicio.
-        </p>
+        <h1 className="text-xl font-semibold tracking-tight text-foreground">{t("No se ha podido cargar esta página")}</h1>
+        <p className="mt-2 text-sm text-muted-foreground">{t("Se ha producido un error. Puedes volver a intentarlo o regresar al inicio.")}</p>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <button
             onClick={() => {
@@ -59,15 +54,11 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
               reset();
             }}
             className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-          >
-            Reintentar
-          </button>
+          >{t("Reintentar")}</button>
           <a
             href="/"
             className="inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
-          >
-            Volver al inicio
-          </a>
+          >{t("Volver al inicio")}</a>
         </div>
       </div>
     </div>
@@ -122,19 +113,29 @@ function RootShell({ children }: { children: ReactNode }) {
   );
 }
 
+function SkipToContent() {
+  const t = useT();
+  return (
+    <a href="#contenido-principal" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-background focus:p-3 focus:text-foreground focus:shadow-lg">
+      {t("Saltar al contenido principal")}
+    </a>
+  );
+}
+
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
-
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="flex min-h-screen flex-col bg-background text-foreground">
-        <a href="#contenido-principal" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-background focus:p-3 focus:text-foreground focus:shadow-lg">Saltar al contenido principal</a>
-        <SiteHeader />
-        <main id="contenido-principal" className="flex-1">
-          <Outlet />
-        </main>
-        <SiteFooter />
-      </div>
+      <LanguageProvider>
+        <div className="flex min-h-screen flex-col bg-background text-foreground">
+          <SkipToContent />
+          <SiteHeader />
+          <main id="contenido-principal" className="flex-1">
+            <Outlet />
+          </main>
+          <SiteFooter />
+        </div>
+      </LanguageProvider>
     </QueryClientProvider>
   );
 }

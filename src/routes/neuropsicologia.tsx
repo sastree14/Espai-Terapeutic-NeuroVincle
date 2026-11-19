@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useT } from "../lib/i18n";
 
 export const Route = createFileRoute("/neuropsicologia")({
   head: () => ({
@@ -15,18 +16,13 @@ export const Route = createFileRoute("/neuropsicologia")({
 });
 
 function Neuropsicologia() {
+  const t = useT();
   return (
     <div>
       <section className="mx-auto max-w-4xl px-6 py-20 md:py-28">
-        <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">Neuropsicología</p>
-        <h1 className="mt-4 font-serif text-4xl md:text-5xl">
-          Cuidar el cerebro es un trabajo de años, no de semanas.
-        </h1>
-        <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-          Los cambios cognitivos pueden tener causas muy diferentes. La valoración profesional permite
-          comprender las necesidades de cada persona, orientar el seguimiento y proponer apoyos
-          adaptados a su situación.
-        </p>
+        <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">{t("Neuropsicología")}</p>
+        <h1 className="mt-4 font-serif text-4xl md:text-5xl">{t("Cuidar el cerebro es un trabajo de años, no de semanas.")}</h1>
+        <p className="mt-6 text-lg leading-relaxed text-muted-foreground">{t("Los cambios cognitivos pueden tener causas muy diferentes. La valoración profesional permite comprender las necesidades de cada persona, orientar el seguimiento y proponer apoyos adaptados a su situación.")}</p>
       </section>
 
       <section className="border-y border-border/60 bg-secondary/40">
@@ -45,40 +41,27 @@ function Neuropsicologia() {
               d: "Cuando ya hay un diagnóstico, ofrecemos estimulación cognitiva, orientación familiar y un acompañamiento honesto sobre qué esperar.",
             },
           ].map((b) => (
-            <div key={b.t} className="border-t border-foreground/20 pt-6">
+            <div key={t(b.t)} className="border-t border-foreground/20 pt-6">
               <h2 className="font-serif text-xl">{b.t}</h2>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{b.d}</p>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{t(b.d)}</p>
             </div>
           ))}
         </div>
       </section>
 
       <section className="mx-auto max-w-4xl px-6 py-20">
-        <h2 className="font-serif text-3xl md:text-4xl">Nuestro enfoque</h2>
+        <h2 className="font-serif text-3xl md:text-4xl">{t("Nuestro enfoque")}</h2>
         <div className="mt-10 space-y-10 text-base leading-relaxed text-muted-foreground md:hyphens-auto md:text-justify">
-          <p>
-            Trabajamos desde una mirada integradora. Combinamos la evaluación neuropsicológica con
-            la perspectiva clínica psicológica: las personas no son solo un perfil cognitivo, son
-            también historia, vínculos y emociones.
-          </p>
-          <p>
-            En cada caso valoramos qué áreas cognitivas conviene entrenar (memoria, atención,
-            lenguaje, funciones ejecutivas), qué hábitos pueden ajustarse (sueño, ejercicio,
-            actividad social) y qué apoyos necesita la familia para sostener el proceso.
-          </p>
-          <p>
-            Y, sobre todo, te lo contamos como es. No prometemos resultados imposibles; buscamos ayudarte a comprender qué sucede y
-            encontrar estrategias realistas para favorecer tu bienestar.
-          </p>
+          <p>{t("Trabajamos desde una mirada integradora. Combinamos la evaluación neuropsicológica con la perspectiva clínica psicológica: las personas no son solo un perfil cognitivo, son también historia, vínculos y emociones.")}</p>
+          <p>{t("En cada caso valoramos qué áreas cognitivas conviene entrenar (memoria, atención, lenguaje, funciones ejecutivas), qué hábitos pueden ajustarse (sueño, ejercicio, actividad social) y qué apoyos necesita la familia para sostener el proceso.")}</p>
+          <p>{t("Y, sobre todo, te lo contamos como es. No prometemos resultados imposibles; buscamos ayudarte a comprender qué sucede y encontrar estrategias realistas para favorecer tu bienestar.")}</p>
         </div>
 
         <div className="mt-12">
           <Link
             to="/contacto"
             className="inline-flex items-center rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition hover:opacity-90"
-          >
-            Hablemos de tu caso
-          </Link>
+          >{t("Hablemos de tu caso")}</Link>
         </div>
       </section>
     </div>

@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { siteConfig } from "../lib/site-config";
+import { useT } from "../lib/i18n";
 
 export const Route = createFileRoute("/contacto")({
   head: () => ({
@@ -16,46 +17,35 @@ export const Route = createFileRoute("/contacto")({
 });
 
 function Contacto() {
+  const t = useT();
   return (
     <div>
       <section className="mx-auto max-w-4xl px-6 py-20 md:py-28">
-        <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">Contacto</p>
-        <h1 className="mt-4 font-serif text-4xl md:text-5xl">
-          Empezar es la parte más difícil. Estamos al otro lado.
-        </h1>
-        <p className="mt-6 text-lg text-muted-foreground">
-          Elige el canal que te resulte más cómodo para consultar disponibilidad y modalidades de atención.
-        </p>
+        <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">{t("Contacto")}</p>
+        <h1 className="mt-4 font-serif text-4xl md:text-5xl">{t("Empezar es la parte más difícil. Estamos al otro lado.")}</h1>
+        <p className="mt-6 text-lg text-muted-foreground">{t("Elige el canal que te resulte más cómodo para consultar disponibilidad y modalidades de atención.")}</p>
       </section>
 
       <section className="mx-auto w-full max-w-6xl px-6">
         <div className="grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-2 lg:grid-cols-3">
           <div className="flex min-h-[292px] flex-col bg-background p-7 sm:p-8">
-            <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">Agendar online</p>
-            <h2 className="mt-3 font-serif text-2xl">Reserva tu primera visita</h2>
-            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              Elige día y hora directamente en nuestro calendario. La primera visita está pensada para
-              conocernos, escucharte y orientarte sin compromiso.
-            </p>
+            <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">{t("Agendar online")}</p>
+            <h2 className="mt-3 font-serif text-2xl">{t("Reserva tu primera visita")}</h2>
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{t("Elige día y hora directamente en nuestro calendario. La primera visita está pensada para conocernos, escucharte y orientarte sin compromiso.")}</p>
             <div className="mt-auto pt-6">
               <a
                 href={siteConfig.bookingUrl}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition hover:opacity-90"
-              >
-                Abrir calendario
-              </a>
+              >{t("Abrir calendario")}</a>
             </div>
           </div>
 
           <div className="flex min-h-[292px] flex-col bg-background p-7 sm:p-8">
-            <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">Email</p>
-            <h2 className="mt-3 font-serif text-2xl">Cuéntanos qué necesitas</h2>
-            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              Si prefieres escribirnos antes, consúltanos por correo la disponibilidad y las modalidades.
-              Por privacidad, evita enviar informes, diagnósticos u otros datos de salud por correo ordinario.
-            </p>
+            <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">{t("Email")}</p>
+            <h2 className="mt-3 font-serif text-2xl">{t("Cuéntanos qué necesitas")}</h2>
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{t("Si prefieres escribirnos antes, consúltanos por correo la disponibilidad y las modalidades. Por privacidad, evita enviar informes, diagnósticos u otros datos de salud por correo ordinario.")}</p>
             <div className="mt-auto pt-6">
               <a
                 href={`mailto:${siteConfig.contactEmail}`}
@@ -67,16 +57,13 @@ function Contacto() {
           </div>
 
           <div className="flex min-h-[292px] flex-col bg-background p-7 sm:p-8">
-            <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">Teléfono</p>
-            <h2 className="mt-3 font-serif text-2xl">Hablemos por teléfono</h2>
-            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              Si te resulta más cómodo llamarnos, utiliza este número para consultar disponibilidad
-              y resolver dudas generales sobre la atención.
-            </p>
+            <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">{t("Teléfono")}</p>
+            <h2 className="mt-3 font-serif text-2xl">{t("Hablemos por teléfono")}</h2>
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{t("Si te resulta más cómodo llamarnos, utiliza este número para consultar disponibilidad y resolver dudas generales sobre la atención.")}</p>
             <div className="mt-auto pt-6">
               <a
                 href={`tel:${siteConfig.contactPhone}`}
-                aria-label={`Llamar al ${siteConfig.contactPhoneDisplay}`}
+                aria-label={`${t("Llamar al")} ${siteConfig.contactPhoneDisplay}`}
                 className="inline-flex items-center rounded-full border border-foreground/20 px-6 py-3 text-sm font-medium text-foreground transition hover:bg-foreground hover:text-background"
               >
                 {siteConfig.contactPhoneDisplay}
@@ -89,18 +76,12 @@ function Contacto() {
       <section className="mx-auto max-w-4xl px-6 py-20">
         <div className="grid gap-10 md:grid-cols-2">
           <div>
-            <h3 className="font-serif text-xl">Modalidad</h3>
-            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              Atención presencial en consulta y online por videollamada. Tú eliges la opción que
-              mejor se adapte a tu día a día.
-            </p>
+            <h3 className="font-serif text-xl">{t("Modalidad")}</h3>
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{t("Atención presencial en consulta y online por videollamada. Tú eliges la opción que mejor se adapte a tu día a día.")}</p>
           </div>
           <div>
-            <h3 className="font-serif text-xl">Confidencialidad</h3>
-            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              Toda la información compartida se trata bajo secreto profesional y según la normativa
-              vigente de protección de datos.
-            </p>
+            <h3 className="font-serif text-xl">{t("Confidencialidad")}</h3>
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{t("Toda la información compartida se trata bajo secreto profesional y según la normativa vigente de protección de datos.")}</p>
           </div>
         </div>
       </section>
