@@ -1,43 +1,38 @@
 import { forwardRef, type SVGProps } from "react";
 
+/** Símbolo de los tres círculos del logotipo oficial de NeuroVincle. */
 export const Logo = forwardRef<SVGSVGElement, SVGProps<SVGSVGElement>>(
   function Logo({ className, ...props }, ref) {
     return (
       <svg
         ref={ref}
-        viewBox="0 0 48 48"
+        viewBox="0 0 56 56"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         className={className}
         {...props}
       >
-        {/* Fine arcs forming a soft triangle */}
-        <path
-          d="M24 7A17.33 17.33 0 0 1 9 33"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          className="text-clay/70"
-        />
-        <path
-          d="M9 33A17.33 17.33 0 0 1 39 33"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          className="text-clay/70"
-        />
-        <path
-          d="M39 33A17.33 17.33 0 0 1 24 7"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          className="text-clay/70"
-        />
-        {/* Three earthy nodes */}
-        <circle cx="24" cy="7" r="2.5" className="fill-foreground" />
-        <circle cx="9" cy="33" r="2.5" className="fill-clay" />
-        <circle cx="39" cy="33" r="2.5" className="fill-primary" />
+        <circle cx="28" cy="16" r="15" fill="#c6b8ac" />
+        <circle cx="17" cy="34" r="15" fill="#9b968b" style={{ mixBlendMode: "multiply" }} />
+        <circle cx="39" cy="34" r="15" fill="#ab9989" style={{ mixBlendMode: "multiply" }} />
       </svg>
     );
-  }
+  },
 );
+
+/** Versión horizontal responsive, con tipografía nítida a cualquier escala. */
+export function BrandLockup() {
+  return (
+    <span className="inline-flex min-w-0 items-center gap-2.5">
+      <Logo className="h-11 w-11 shrink-0 sm:h-12 sm:w-12" aria-hidden="true" />
+      <span className="flex min-w-0 flex-col justify-center">
+        <span className="whitespace-nowrap font-serif text-[28px] leading-[0.95] tracking-[-0.025em] text-foreground">
+          NeuroVincle
+        </span>
+        <span className="mt-1 whitespace-nowrap text-[7px] font-medium uppercase tracking-[0.12em] text-muted-foreground sm:text-[8px]">
+          Neuropsicologia | Psicologia
+        </span>
+      </span>
+    </span>
+  );
+}

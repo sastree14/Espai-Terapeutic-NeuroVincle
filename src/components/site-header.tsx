@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Logo } from "./logo";
+import { BrandLockup } from "./logo";
 
 const navItems = [
   { to: "/", label: "Inicio" },
@@ -14,18 +14,12 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
   return (
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/85 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link to="/" className="group flex items-center gap-2.5" onClick={() => setOpen(false)}>
-          <Logo className="h-9 w-9 text-primary" aria-hidden="true" />
-          <span className="flex flex-col leading-tight">
-            <span className="font-serif text-lg tracking-tight text-foreground">NeuroVincle</span>
-            <span className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-              Neuropsicología · Psicología
-            </span>
-          </span>
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
+        <Link to="/" className="group flex shrink-0 items-center" onClick={() => setOpen(false)}>
+          <BrandLockup />
         </Link>
 
-        <nav aria-label="Navegación principal" className="hidden items-center gap-8 md:flex">
+        <nav aria-label="Navegación principal" className="hidden items-center gap-6 lg:flex">
           {navItems.map((item) => (
             <Link
               key={item.to}
@@ -51,7 +45,7 @@ export function SiteHeader() {
           aria-expanded={open}
           aria-controls="menu-movil"
           onClick={() => setOpen((v) => !v)}
-          className="flex h-10 w-10 items-center justify-center rounded-md border border-border md:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-md border border-border lg:hidden"
         >
           <span className="space-y-1.5">
             <span className="block h-px w-5 bg-foreground" />

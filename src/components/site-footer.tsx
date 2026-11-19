@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Logo } from "./logo";
+import { BrandLockup } from "./logo";
 import { siteConfig } from "../lib/site-config";
 
 export function SiteFooter() {
@@ -7,9 +7,8 @@ export function SiteFooter() {
     <footer className="border-t border-border/60 bg-secondary/40">
       <div className="mx-auto grid max-w-6xl gap-10 px-6 py-14 md:grid-cols-3">
         <div>
-          <div className="flex items-center gap-2.5">
-            <Logo className="h-9 w-9 text-primary" aria-hidden="true" />
-            <span className="font-serif text-lg tracking-tight">NeuroVincle</span>
+          <div className="flex items-center">
+            <BrandLockup />
           </div>
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
             Atención de neuropsicología y psicología. Acompañamos a personas y familias con
