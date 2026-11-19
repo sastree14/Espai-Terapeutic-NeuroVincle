@@ -20,7 +20,7 @@ const equipo = [
     nombre: "Jana Oró",
     rol: "Neuropsicóloga",
     bio: "Soy neuropsicóloga y mi trabajo se centra en la evaluación neuropsicológica, la estimulación cognitiva y la rehabilitación, siempre desde un enfoque cercano, individualizado y basado en la evidencia científica.\n\nAcompaño a personas que presentan alteraciones cognitivas derivadas de ictus, traumatismos craneoencefálicos, enfermedades neurodegenerativas u otras condiciones neurológicas, diseñando programas de intervención adaptados a las necesidades de cada persona. Asimismo, considero fundamental el acompañamiento y la orientación a las familias, proporcionando herramientas que favorezcan la comprensión del proceso y la participación activa en la intervención.",
-    imagen: "/jana-oro-retrato-amplio.webp",
+    imagen: "/jana-oro-avatar.webp",
     inicial: "J",
   },
   {
@@ -47,15 +47,18 @@ function SobreNosotras() {
           {equipo.map((p) => (
             <article key={p.nombre} className="flex h-full min-w-0 flex-col bg-background p-7 shadow-[0_20px_50px_-30px_rgba(40,30,20,0.25)] sm:p-8">
               {p.imagen ? (
-                <img
-                  src={p.imagen}
-                  alt={`${t("Foto de")} ${p.nombre}`}
-                  width={128}
-                  height={128}
-                  className="h-32 w-32 shrink-0 rounded-full object-cover object-center ring-1 ring-border"
-                  loading="lazy"
-                  decoding="async"
-                />
+                <div className="h-32 w-32 shrink-0 overflow-hidden rounded-full border border-border bg-background">
+                  <img
+                    src={p.imagen}
+                    alt={`${t("Foto de")} ${p.nombre}`}
+                    width={128}
+                    height={128}
+                    className="h-full w-full object-cover object-center"
+                    style={p.nombre === "Jana Oró" ? { transform: "scale(0.95)", transformOrigin: "50% 50%" } : undefined}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
               ) : (
                 <div className="flex h-32 w-32 shrink-0 items-center justify-center rounded-full border border-border bg-secondary font-serif text-4xl text-clay">
                   {p.inicial}
