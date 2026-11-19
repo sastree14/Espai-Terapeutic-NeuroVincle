@@ -1,6 +1,4 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import janaAsset from "@/assets/jana-cara.png.asset.json";
-import ariadnaAsset from "@/assets/ariadna-golsa.jpg.asset.json";
 
 export const Route = createFileRoute("/sobre-nosotras")({
   head: () => ({
@@ -21,14 +19,14 @@ const equipo = [
     nombre: "Jana Oró",
     rol: "Neuropsicóloga",
     bio: "Soy neuropsicóloga y mi trabajo se centra en la evaluación neuropsicológica, la estimulación cognitiva y la rehabilitación, siempre desde un enfoque cercano, individualizado y basado en la evidencia científica.\n\nAcompaño a personas que presentan alteraciones cognitivas derivadas de ictus, traumatismos craneoencefálicos, enfermedades neurodegenerativas u otras condiciones neurológicas, diseñando programas de intervención adaptados a las necesidades de cada persona. Asimismo, considero fundamental el acompañamiento y la orientación a las familias, proporcionando herramientas que favorezcan la comprensión del proceso y la participación activa en la intervención.",
-    imagen: janaAsset.url,
+    imagen: "/jana-oro-avatar.webp",
     inicial: "J",
   },
   {
     nombre: "Ariadna Golsa Muñoz",
     rol: "Psicóloga General Sanitaria",
     bio: "Soy Psicóloga General Sanitaria, especializada en psicoterapia infantojuvenil y de adultos. Trabajo desde un enfoque integrador, cercano y basado en la evidencia científica, y cuento con formación específica en el abordaje de los trastornos del estado de ánimo.\n\nEntiendo la terapia como un espacio de confianza, escucha y acompañamiento, donde cada persona pueda expresarse con libertad, comprender lo que le ocurre y encontrar herramientas para afrontar sus dificultades. Mi objetivo es ofrecer una atención personalizada, adaptando cada proceso a las necesidades y circunstancias de cada persona.",
-    imagen: ariadnaAsset.url,
+    imagen: null,
     inicial: "A",
   },
 ];
@@ -50,24 +48,26 @@ function SobreNosotras() {
 
       <section className="border-y border-border/60 bg-secondary/40">
         <div className="mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-2">
-          {equipo.map((p, i) => (
-            <article key={p.nombre} className="bg-background p-8 shadow-[0_20px_50px_-30px_rgba(40,30,20,0.25)]">
+          {equipo.map((p) => (
+            <article key={p.nombre} className="flex h-full min-w-0 flex-col bg-background p-7 shadow-[0_20px_50px_-30px_rgba(40,30,20,0.25)] sm:p-8">
               {p.imagen ? (
                 <img
                   src={p.imagen}
                   alt={`Foto de ${p.nombre}`}
-                  className="h-32 w-32 rounded-full object-cover ring-1 ring-border"
+                  width={128}
+                  height={128}
+                  className="h-32 w-32 shrink-0 rounded-full object-cover object-center ring-1 ring-border"
                   loading="lazy"
                   decoding="async"
                 />
               ) : (
-                <div className="flex h-20 w-20 items-center justify-center rounded-full border border-primary/30 font-serif text-3xl text-primary">
+                <div className="flex h-32 w-32 shrink-0 items-center justify-center rounded-full border border-border bg-secondary font-serif text-4xl text-clay">
                   {p.inicial}
                 </div>
               )}
               <h2 className="mt-6 font-serif text-2xl">{p.nombre}</h2>
               <p className="text-sm uppercase tracking-wider text-muted-foreground">{p.rol}</p>
-              <div className="mt-4 space-y-4 text-sm leading-relaxed text-muted-foreground">
+              <div className="mt-4 space-y-4 text-sm leading-7 text-muted-foreground md:hyphens-auto md:text-justify">
                 {p.bio.split("\n\n").map((parrafo, idx) => (
                   <p key={idx}>{parrafo}</p>
                 ))}

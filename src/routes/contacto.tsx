@@ -28,37 +28,61 @@ function Contacto() {
         </p>
       </section>
 
-      <section className="mx-auto grid max-w-6xl gap-px overflow-hidden rounded-sm border border-border bg-border px-0 md:grid-cols-2 md:mx-6">
-        <div className="bg-background p-10">
-          <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">Agendar online</p>
-          <h2 className="mt-3 font-serif text-2xl">Reserva tu primera visita</h2>
-          <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-            Elige día y hora directamente en nuestro calendario. La primera visita está pensada para
-            conocernos, escucharte y orientarte sin compromiso.
-          </p>
-          <a
-            href={siteConfig.bookingUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="mt-6 inline-flex items-center rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition hover:opacity-90"
-          >
-            Abrir calendario
-          </a>
-        </div>
+      <section className="mx-auto w-full max-w-6xl px-6">
+        <div className="grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-2 lg:grid-cols-3">
+          <div className="flex min-h-[292px] flex-col bg-background p-7 sm:p-8">
+            <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">Agendar online</p>
+            <h2 className="mt-3 font-serif text-2xl">Reserva tu primera visita</h2>
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              Elige día y hora directamente en nuestro calendario. La primera visita está pensada para
+              conocernos, escucharte y orientarte sin compromiso.
+            </p>
+            <div className="mt-auto pt-6">
+              <a
+                href={siteConfig.bookingUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition hover:opacity-90"
+              >
+                Abrir calendario
+              </a>
+            </div>
+          </div>
 
-        <div className="bg-background p-10">
-          <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">Email</p>
-          <h2 className="mt-3 font-serif text-2xl">Cuéntanos qué necesitas</h2>
-          <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-            Si prefieres escribirnos antes, consúltanos por correo la disponibilidad y las modalidades.
-            Por privacidad, evita enviar informes, diagnósticos u otros datos de salud por correo ordinario.
-          </p>
-          <a
-            href={`mailto:${siteConfig.contactEmail}`}
-            className="mt-6 inline-flex items-center rounded-full border border-foreground/20 px-6 py-3 text-sm font-medium text-foreground transition hover:bg-foreground hover:text-background"
-          >
-            {siteConfig.contactEmail}
-          </a>
+          <div className="flex min-h-[292px] flex-col bg-background p-7 sm:p-8">
+            <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">Email</p>
+            <h2 className="mt-3 font-serif text-2xl">Cuéntanos qué necesitas</h2>
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              Si prefieres escribirnos antes, consúltanos por correo la disponibilidad y las modalidades.
+              Por privacidad, evita enviar informes, diagnósticos u otros datos de salud por correo ordinario.
+            </p>
+            <div className="mt-auto pt-6">
+              <a
+                href={`mailto:${siteConfig.contactEmail}`}
+                className="inline-flex items-center max-w-full break-all rounded-full border border-foreground/20 px-5 py-3 text-sm font-medium text-foreground transition hover:bg-foreground hover:text-background"
+              >
+                {siteConfig.contactEmail}
+              </a>
+            </div>
+          </div>
+
+          <div className="flex min-h-[292px] flex-col bg-background p-7 sm:p-8">
+            <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">Teléfono</p>
+            <h2 className="mt-3 font-serif text-2xl">Hablemos por teléfono</h2>
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              Si te resulta más cómodo llamarnos, utiliza este número para consultar disponibilidad
+              y resolver dudas generales sobre la atención.
+            </p>
+            <div className="mt-auto pt-6">
+              <a
+                href={`tel:${siteConfig.contactPhone}`}
+                aria-label={`Llamar al ${siteConfig.contactPhoneDisplay}`}
+                className="inline-flex items-center rounded-full border border-foreground/20 px-6 py-3 text-sm font-medium text-foreground transition hover:bg-foreground hover:text-background"
+              >
+                {siteConfig.contactPhoneDisplay}
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 

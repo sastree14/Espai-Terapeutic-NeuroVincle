@@ -55,7 +55,7 @@ function TerapiaPsicologica() {
 
       <section className="mx-auto max-w-4xl px-6 py-20">
         <h2 className="font-serif text-3xl md:text-4xl">Nuestro enfoque</h2>
-        <div className="mt-10 space-y-10 text-base leading-relaxed text-muted-foreground">
+        <div className="mt-10 space-y-10 text-base leading-relaxed text-muted-foreground md:hyphens-auto md:text-justify">
           <p>
             Trabajamos desde una perspectiva integradora, cercana y basada en la evidencia científica.
             Cada proceso se adapta a la persona, a sus necesidades, a su contexto y a su momento vital.

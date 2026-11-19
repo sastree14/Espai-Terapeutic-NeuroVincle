@@ -55,7 +55,7 @@ function Neuropsicologia() {
 
       <section className="mx-auto max-w-4xl px-6 py-20">
         <h2 className="font-serif text-3xl md:text-4xl">Nuestro enfoque</h2>
-        <div className="mt-10 space-y-10 text-base leading-relaxed text-muted-foreground">
+        <div className="mt-10 space-y-10 text-base leading-relaxed text-muted-foreground md:hyphens-auto md:text-justify">
           <p>
             Trabajamos desde una mirada integradora. Combinamos la evaluación neuropsicológica con
             la perspectiva clínica psicológica: las personas no son solo un perfil cognitivo, son
